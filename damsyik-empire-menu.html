@@ -94,7 +94,7 @@
     box-shadow: 0 0 0 5px #07120D, 0 0 0 6.5px rgba(216,178,92,.55);
     background: linear-gradient(180deg, #0B1F16, #06100B);
   }
-  .mono { width: 76px; height: 76px; display: block; margin: 0 auto 12px; }
+  .mono { width: 76px; height: 76px; display: block; margin: 0 auto 12px; object-fit: contain; }
   .wordmark {
     font-family: "Cormorant Garamond", "Times New Roman", serif;
     font-weight: 700;
@@ -238,13 +238,7 @@
 
 <header class="hero">
   <div class="arch">
-    <svg class="mono" viewBox="0 0 100 100" role="img" aria-label="Damsyik Empire monogram">
-      <defs>
-        <linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F6DE93"/><stop offset=".7" stop-color="#C9A04A"/><stop offset="1" stop-color="#E7C36E"/></linearGradient>
-      </defs>
-      <circle cx="50" cy="50" r="47" fill="none" stroke="url(#g)" stroke-width="2.5"/>
-      <text x="50" y="62" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-weight="700" font-size="38" fill="url(#g)" letter-spacing="1">DE</text>
-    </svg>
+    <img class="mono" src="images/logo.png" alt="Damsyik Empire logo">
     <h1 class="wordmark">Damsyik Empire</h1>
     <p>Arabian dining, from Mandy and Kabsah to grills, pizza and kunafa.</p>
   </div>
@@ -340,12 +334,12 @@
         { n: "Chili sauce", p: 2.00 },
         { n: "Garlic & cheezy sauce", p: 4.00 } ] }
     ] },
-    { id: "shawarma", title: "Shawarma", prep: "Ready in 10 to 15 min", groups: [
+    { id: "shawarma", title: "Shawarma",groups: [
       { t: "", items: [
         { n: "Chicken Shawarma", d: "Juicy chicken slices in warm, soft Saj bread with tomatoes, pickles, onions and creamy garlic sauce", v: [["Regular", 11.30], ["Plate, with fries", 15.00]] },
         { n: "Lamb Shawarma", d: "Juicy lamb slices in warm, soft Saj bread with fresh parsley, pickles, carrot and creamy garlic sauce", v: [["Regular", 15.00], ["Plate, with fries", 18.00]] } ] }
     ] },
-    { id: "mashawey", title: "Mashawey", note: "Grills and kebabs.", prep: "Ready in 15 to 20 min", groups: [
+    { id: "mashawey", title: "Mashawey", note: "Grills and kebabs.", groups: [
       { t: "", items: [
         { n: "Mashawey Ayam", d: "Grilled half chicken, served with fries and salad", p: 27.20 },
         { n: "Mashawey Kambing", d: "Grilled lamb shoulder, served with fries and salad", p: 40.50 },
@@ -358,14 +352,14 @@
         { n: "Kebab Ayam Wrap", d: "Grilled chicken skewers wrapped in Saj bread", p: 10.50 },
         { n: "Kebab Kambing Wrap", d: "Grilled lamb skewers wrapped in Saj bread", p: 13.50 } ] }
     ] },
-    { id: "western", title: "Western & Grill", short: "Western", prep: "Ready in 15 to 20 min", groups: [
+    { id: "western", title: "Western & Grill", short: "Western", groups: [
       { t: "", items: [
         { n: "Fish & Chips", d: "Golden battered seabass with fries, fresh salad, lemon and tartar sauce", p: 25.00 },
         { n: "Grilled Fish", d: "Whole fish in our spice blend, grilled with a smoky char. With fries, garden salad, garlic sauce and lemon", p: 42.50 },
         { n: "Sirloin Steak (200g and above)", d: "Premium sirloin with rosemary and roasted garlic, creamy mashed potato, seasonal vegetables and brown sauce", p: 76.50 },
         { n: "Salmon Steak", d: "Pan-seared salmon fillet with herbs and spices, mashed potato, seasonal vegetables and brown sauce", p: 40.00 } ] }
     ] },
-    { id: "pasta", title: "Pasta", prep: "Ready in about 15 min", groups: [
+    { id: "pasta", title: "Pasta", groups: [
       { t: "", items: [
         { n: "Aglio Olio Seafood", d: "Spaghetti with garlic, chilli flakes and olive oil, topped with prawns, green mussels and cherry tomatoes", p: 20.00, img: "images/AglioOlio.png" },
         { n: "Spaghetti Carbonara", d: "Creamy carbonara with tender chicken slices and parmesan", p: 21.90, img: "images/carbonara.png" },
@@ -392,22 +386,22 @@
         { n: "Yoghurt Salad", d: "Cherry tomato, cucumber, chopped orange, yogurt and olive oil", p: 14.90 },
         { n: "Salatoh", d: "Lettuce, carrots, cabbage and olives with crispy pita chips, olive oil and pomegranate sauce", p: 8.00 },
         { n: "Shakshuka", d: "Sunny side up egg in rich tomato sauce with peppers and spices, with 2 pieces Lebanese bread", p: 15.90 },
-        { n: "Arayes", d: "Spiced ground meat with mozzarella, cut into 4 pieces, with homemade chilli sauce. Ready in 10 min", v: [["Lamb", 17.00], ["Chicken", 13.00]] },
+        { n: "Arayes", d: "Spiced ground meat with mozzarella, cut into 4 pieces, with homemade chilli sauce.", v: [["Lamb", 17.00], ["Chicken", 13.00]] },
         { n: "Mushroom Soup with Garlic Bread", d: "Rich, velvety mushroom soup with toasted garlic bread", v: [["Regular", 6.90], ["With shredded chicken", 11.90]] },
         { n: "French Fries (250g)", d: "Shoestring fries with homemade chilli sauce", p: 10.00 },
         { n: "Potato Wedges (250g)", d: "Thick-cut potato slices with homemade garlic sauce", p: 11.00 } ] }
     ] },
-    { id: "kids", title: "Kids Meal", prep: "Ready in about 10 min", groups: [
+    { id: "kids", title: "Kids Meal", groups: [
       { t: "", items: [
         { n: "Spaghetti Carbonara with Chicken Kebab Nuggets (3 pcs)", d: "Creamy carbonara, homemade tempura chicken nuggets, orange wedges, broccoli and baby carrots. With a cup of iced Milo", p: 13.90 },
         { n: "Mandy Rice with Chicken Kebab Nuggets (3 pcs)", d: "Mandy rice, homemade tempura chicken nuggets, orange wedges, broccoli and baby carrots. With a cup of mango juice", p: 15.90 },
         { n: "Chicken Kebab Nuggets with Fries (3 pcs)", d: "Homemade tempura chicken nuggets, fries, orange wedges, broccoli and baby carrots. With a cup of mango juice", p: 15.90 } ] }
     ] },
     { id: "desserts", title: "Sweets & Fruits", short: "Desserts", groups: [
-      { t: "Fruit and pudding", note: "Ready in about 5 min", items: [
+      { t: "Fruit and pudding",items: [
         { n: "Fruit Platter", d: "Mixed fruit platter. Fruits subject to availability", p: 17.90 },
         { n: "Pudding Caramel", d: "Silky custard with bittersweet golden caramel sauce", p: 5.00 } ] },
-      { t: "Kunafa", note: "Crispy kataifi, akawi cheese filling and syrup, dusted with ground pistachio. Ready in about 15 min", items: [
+      { t: "Kunafa", note: "Crispy kataifi, akawi cheese filling and syrup, dusted with ground pistachio.", items: [
         { n: "Kunafa", p: 23.60 },
         { n: "Kunafa Ice Cream", p: 28.30 },
         { n: "Kunafa Pistachio", p: 32.00 },
